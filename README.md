@@ -120,14 +120,32 @@ Smart Job Portal Internship Project – 2026
 
 ## Screenshots
 <img width="695" height="591" alt="image" src="https://github.com/user-attachments/assets/4a9d91ad-1b74-4b74-ab90-7e2d2653304b" />
+
 * Login Page
   
+  <img width="1312" height="915" alt="image" src="https://github.com/user-attachments/assets/8786adca-406e-4c94-acc5-95624ebd7237" />
+  
 * Registration Page
+  
+  <img width="1722" height="876" alt="image" src="https://github.com/user-attachments/assets/a3dcd953-2e6d-4bb1-baa6-fde51a1c5568" />
+  
 * User Dashboard
+  
+  <img width="1708" height="1858" alt="image" src="https://github.com/user-attachments/assets/a848bc84-e14d-4c64-81c5-ab0ef5e01af7" />
+
 * Admin Dashboard
+  
+  <img width="1675" height="522" alt="image" src="https://github.com/user-attachments/assets/243d7a3a-25f9-4287-a2a7-7a8e1341b673" />
+
 * Job Listings
+  
+  <img width="1683" height="830" alt="image" src="https://github.com/user-attachments/assets/87224d92-ab0a-4021-b144-67e1a07dcc8c" />
+
 * Profile Page
+  
+  <img width="1672" height="502" alt="image" src="https://github.com/user-attachments/assets/aec8a05a-e2a5-439d-897c-69fa7128166a" />
+
 * Application Management
-* 
+  
 ## License
 This project is developed for educational and internship purposes.
