@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
+
 <title>User Registration</title>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet">
+
 <style>
+
 body{
     background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
     min-height:100vh;
     padding:40px;
 }
+
 .register-card{
     max-width:1000px;
     margin:auto;
@@ -20,23 +27,31 @@ body{
     color:white;
     box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
+
 .form-control,
 .form-select{
     border-radius:12px;
 }
+
 h2{
     text-align:center;
     margin-bottom:30px;
 }
+
 </style>
+
 </head>
+
 <body>
+
 <div class="register-card">
+
 <h2>🚀 Smart Job Portal Registration</h2>
 <div th:if="${error}"
      class="alert alert-danger">
     <span th:text="${error}"></span>
 </div>
+
 <div th:if="${success}"
      class="alert alert-success">
     <span th:text="${success}"></span>
@@ -44,27 +59,33 @@ h2{
 <form th:action="@{/saveUser}"
       th:object="${user}"
       method="post">
+
 <div class="row">
+
 <div class="col-md-6 mb-3">
 <label>Full Name</label>
 <input type="text"
        th:field="*{name}"
        class="form-control mb-2"
        placeholder="Full Name">
+
 <div class="text-danger"
      th:errors="*{name}">
 </div>
 </div>
+
 <div class="col-md-6 mb-3">
 <label>Email</label>
 <input type="email"
        th:field="*{email}"
        class="form-control mb-2"
        placeholder="Email">
+
 <div class="text-danger"
      th:errors="*{email}">
 </div>
 </div>
+
 <div class="col-md-6 mb-3">
 <label>Password</label>
 <input type="password"
@@ -73,16 +94,19 @@ h2{
        class="form-control mb-2"
        placeholder="Password"
        required>
+
 <small class="text-warning">
 Password must contain:
 Uppercase, Lowercase,
 Number, Special Character
 and minimum 6 characters.
 </small>
+
 <div class="text-danger"
      th:errors="*{password}">
 </div>
 </div>
+
 <div class="col-md-6 mb-3">
 <label>Phone Number</label>
 <input type="tel"
@@ -94,38 +118,44 @@ and minimum 6 characters.
      th:errors="*{phone}">
 </div>
 </div>
+
 <div class="col-md-6 mb-3">
 <label>Gender</label>
 <select th:field="*{gender}"
 class="form-select">
-<option>Male</option>
-<option>Female</option>
-<option>Other</option>
+<option value = "Male">Male</option>
+<option value = "Female">Female</option>
+<option value = "Other">Other</option>
 </select>
 </div>
+
 <div class="col-md-6 mb-3">
 <label>Date Of Birth</label>
 <input type="date" th:field="*{dob}"
 class="form-control">
 </div>
+
 <div class="col-md-12 mb-3">
 <label>Address</label>
 <input type="text" th:field="*{address}"
 class="form-control">
 </div>
+
 <div class="col-md-4 mb-3">
 <label>City</label>
 <input type="text" th:field="*{city}"
 class="form-control">
 </div>
+
 <div class="col-md-4 mb-3">
 <label>State</label>
 <input type="text" th:field="*{state}"
 class="form-control">
 </div>
+
 <div class="col-md-4 mb-3">
 <label>Country</label>
-    <select name="country" class="form-select" required>
+<select th:field="*{country}" class="form-select" required>
     <option value="">Select Country</option>
     <option value="India">India</option>
     <option value="United States">United States</option>
@@ -140,28 +170,33 @@ class="form-control">
     <!-- Add remaining countries -->
 </select>
 </div>
+
 <div class="col-md-6 mb-3">
 <label>Qualification</label>
 <input type="text" th:field="*{qualification}"
 class="form-control">
 </div>
+
 <div class="col-md-6 mb-3">
 <label>College</label>
 <input type="text" th:field="*{college}"
 class="form-control">
 </div>
+
 <div class="col-md-6 mb-3">
 <label>Skills</label>
 <input type="text" th:field="*{skills}"
 class="form-control"
 placeholder="Java, Spring Boot, MySQL">
 </div>
+
 <div class="col-md-6 mb-3">
 <label>Experience</label>
 <input type="text" th:field="*{experience}"
 class="form-control"
 placeholder="Fresher / 2 Years">
 </div>
+
 </div>
 <div class="alert alert-success"
      th:if="${success}"
@@ -170,7 +205,11 @@ placeholder="Fresher / 2 Years">
 <button class="btn btn-success w-100 mt-3">
 Register
 </button>
+
 </form>
+
 </div>
+
 </body>
+
 </html>
